@@ -4,6 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Andrea Taverniti, Software Engineer specializzato in prodotti full-stack, cloud, IoT e progetti R&D.">
+  <meta property="og:title" content="Andrea Taverniti — Software Engineer">
+  <meta property="og:description" content="Software engineering, prodotti full-stack, cloud, IoT e ricerca applicata.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://andreataverniti-dev.github.io/">
+  <link rel="canonical" href="https://andreataverniti-dev.github.io/">
+  <link rel="alternate" hreflang="it" href="https://andreataverniti-dev.github.io/">
+  <link rel="alternate" hreflang="en" href="https://andreataverniti-dev.github.io/?lang=en">
   <title>Andrea Taverniti — Software Engineer</title>
   <style>
     :root { --ink:#132b3d; --blue:#1c6784; --sea:#dce8ed; --paper:#f7f9fa; --muted:#60717d; --line:#c8d8df; }
@@ -18,6 +25,9 @@
     .navlinks { display:flex; gap:22px; align-items:center; font-size:.92rem; }
     .navlinks a { text-decoration:none; color:var(--muted); }
     .navlinks a:hover { color:var(--blue); }
+    .language { display:inline-flex; align-items:center; gap:6px; font-size:.8rem; font-weight:850; letter-spacing:.06em; }
+    .language a { color:var(--muted); }
+    .language .active { color:var(--ink); text-decoration:none; }
     .button { display:inline-flex; align-items:center; justify-content:center; border-radius:999px; padding:12px 18px; background:var(--ink); color:white!important; text-decoration:none; font-weight:750; border:1px solid var(--ink); }
     .button.secondary { background:transparent; color:var(--ink)!important; }
     header { padding:110px 0 78px; }
@@ -58,16 +68,16 @@
     .contact-links { display:grid; gap:12px; }
     .contact-links a { font-weight:800; text-decoration:none; border-bottom:1px solid rgba(19,43,61,.25); padding:12px 0; }
     footer { padding:30px 0; color:var(--muted); font-size:.88rem; }
-    @media(max-width:780px){ .navlinks a:not(.button){display:none}.proof{grid-template-columns:repeat(2,1fr)}.section-head,.contact-card{grid-template-columns:1fr}.case-grid{grid-template-columns:1fr}.case.featured{grid-column:auto}.role{grid-template-columns:1fr}.skills{grid-template-columns:1fr}header{padding-top:78px} }
+    @media(max-width:780px){ .navlinks>a:not(.button){display:none}.proof{grid-template-columns:repeat(2,1fr)}.section-head,.contact-card{grid-template-columns:1fr}.case-grid{grid-template-columns:1fr}.case.featured{grid-column:auto}.role{grid-template-columns:1fr}.skills{grid-template-columns:1fr}header{padding-top:78px} }
   </style>
 </head>
 <body>
-  <nav><div class="wrap"><a class="brand" href="#top">Andrea Taverniti</a><div class="navlinks"><a href="#work">Progetti</a><a href="#experience">Esperienza</a><a href="#skills">Competenze</a><a class="button" href="mailto:tavernitiandrea@gmail.com">Contattami</a></div></div></nav>
+  <nav><div class="wrap"><a class="brand" href="#top">Andrea Taverniti</a><div class="navlinks"><a href="#work">Progetti</a><a href="#experience">Esperienza</a><a href="#skills">Competenze</a><span class="language"><span class="active">IT</span><span>·</span><a href="?lang=en" lang="en">EN</a></span><a class="button" href="mailto:tavernitiandrea@gmail.com">Contattami</a></div></div></nav>
   <header id="top"><div class="wrap">
     <div class="eyebrow">Software Engineer · Full-Stack · Cloud · IoT</div>
     <h1>Trasformo problemi reali in sistemi completi.</h1>
     <p class="lead">Progetto, sviluppo e mantengo prodotti software che collegano applicazioni, cloud e hardware. Lavoro in R&D su progetti europei e costruisco autonomamente piattaforme utilizzate da utenti reali.</p>
-    <div class="actions"><a class="button" href="assets/Andrea_Taverniti_CV_Premium_IT.pdf">Scarica il CV</a><a class="button secondary" href="https://snals-monasterace.web.app/#/home" target="_blank" rel="noreferrer">Vedi SNALS live</a></div>
+    <div class="actions"><a class="button" href="assets/Andrea_Taverniti_CV_Premium_IT.pdf" target="_blank">CV Italiano</a><a class="button secondary" href="assets/Andrea_Taverniti_CV_Premium_EN.pdf" target="_blank" lang="en">English CV</a><a class="button secondary" href="https://snals-monasterace.web.app/#/home" target="_blank" rel="noreferrer">Vedi SNALS live</a></div>
     <div class="proof"><div><strong>80+</strong><span>script FiveM sviluppati</span></div><div><strong>100+</strong><span>community e server supportati</span></div><div><strong>300k+</strong><span>record gestiti in MySQL</span></div><div><strong>End-to-end</strong><span>ownership di prodotto e architettura</span></div></div>
   </div></header>
   <main>
@@ -89,5 +99,50 @@
     <section class="contact" id="contact"><div class="wrap contact-card"><div><div class="eyebrow">Nuove opportunità</div><h2>Costruiamo qualcosa che abbia impatto.</h2></div><div class="contact-links"><a href="mailto:tavernitiandrea@gmail.com">tavernitiandrea@gmail.com</a><a href="https://linkedin.com/in/andrea-taverniti-8403a51bb" target="_blank" rel="noreferrer">LinkedIn</a></div></div></section>
   </main>
   <footer><div class="wrap">© 2026 Andrea Taverniti · Software Engineer</div></footer>
+  <script>
+    if (new URLSearchParams(location.search).get('lang') === 'en') {
+      document.documentElement.lang = 'en';
+      document.title = 'Andrea Taverniti — Software Engineer';
+      document.querySelector('meta[name="description"]').content = 'Andrea Taverniti, Software Engineer focused on full-stack products, cloud, IoT and R&D projects.';
+      const translations = [
+        ['.navlinks a[href="#work"]','Projects'], ['.navlinks a[href="#experience"]','Experience'],
+        ['.navlinks a[href="#skills"]','Skills'], ['.navlinks .button','Contact me'],
+        ['.eyebrow','Software Engineer · Full-Stack · Cloud · IoT'],
+        ['h1','I turn real-world problems into complete systems.'],
+        ['.lead','I design, build and maintain software products connecting applications, cloud services and hardware. I work in R&D on European projects and independently build platforms used by real users.'],
+        ['.actions a:nth-child(1)','Italian CV'], ['.actions a:nth-child(2)','English CV'], ['.actions a:nth-child(3)','View SNALS live'],
+        ['.proof div:nth-child(1) span','FiveM scripts developed'], ['.proof div:nth-child(2) span','communities and servers supported'],
+        ['.proof div:nth-child(3) span','records managed in MySQL'], ['.proof div:nth-child(4) span','product and architecture ownership'],
+        ['#work .section-head h2','Selected projects'],
+        ['#work .section-head p','Case studies showing how I approach context, problems, technical decisions, integration and outcomes.'],
+        ['#work .case:nth-child(1) .tag','Live product · real users'],
+        ['#work .case:nth-child(1) p','A cross-platform platform independently designed and developed to digitise appointments, cases, communications and union help-desk services. It includes roles and approvals, document workflows, real-time chat, QR codes, notifications, reporting and Google Calendar/Meet integration.'],
+        ['#work .case:nth-child(2) .tag','R&D · accessibility'],
+        ['#work .case:nth-child(2) p','Development of a management tool to standardise experience configuration and generate project files; evolutionary maintenance, bug fixing and integration of software, sensors and actuators for a public museum-accessibility system.'],
+        ['#work .case:nth-child(3) .tag','IoT demonstrator'],
+        ['#work .case:nth-child(3) p','Design and integration of a demonstrator using ESP32, relays, proximity sensors, fans and control logic, including assembly, programming, debugging and testing for museums in Calabria.'],
+        ['#work .case:nth-child(4) .tag','European research'],
+        ['#work .case:nth-child(4) p','Creation of the application foundation, technical documentation, presentations and deliverables for a public project focused on accessible, multisensory games for children on the autism spectrum.'],
+        ['#work .case:nth-child(5) .tag','Multiplayer engineering'],
+        ['#work .case:nth-child(5) p','More than 80 custom systems, React interfaces and live architectures for over 100 communities, working with large MySQL databases and asynchronous synchronisation.'],
+        ['#experience .section-head h2','Experience'],
+        ['#experience .section-head p','A career built across professional software development, applied research and independent products.'],
+        ['#experience .role:nth-child(1) time','Jul 2025 — Present'],
+        ['#experience .role:nth-child(1) p','Catanzaro, with hybrid/remote work from Monasterace. Technical analysis, architecture, full-stack development, IoT integration, European-project deliverables and coordination with universities and hardware partners.'],
+        ['#experience .role:nth-child(2) time','2019 — Present'],
+        ['#experience .role:nth-child(2) p','Flutter/Firebase products, web platforms, FiveM development, databases, REST integrations and post-release support for clients and communities.'],
+        ['#skills .section-head h2','Skills'],
+        ['#skills .section-head p','I select the stack around the problem and follow the system from design through maintenance.'],
+        ['#skills .skill:nth-child(2) p','Node.js, Python, Firebase, Cloud Functions, REST APIs and role-based security.'],
+        ['#skills .skill:nth-child(3) p','MySQL, PostgreSQL, Firestore, MongoDB, ESP32, Arduino, sensors, relays and actuators.'],
+        ['#contact .eyebrow','New opportunities'], ['#contact h2','Let’s build something meaningful.']
+      ];
+      for (const [selector, value] of translations) {
+        const element = document.querySelector(selector);
+        if (element) element.textContent = value;
+      }
+      document.querySelector('.language').innerHTML = '<a href="./" lang="it">IT</a><span>·</span><span class="active">EN</span>';
+    }
+  </script>
 </body>
 </html>
