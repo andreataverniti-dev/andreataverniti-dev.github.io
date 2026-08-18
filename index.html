@@ -58,7 +58,7 @@
     .role time { color:var(--blue); font-weight:850; }
     .role h3 { margin:0 0 8px; font-size:1.4rem; }
     .role p { color:var(--muted); margin:0; }
-    .skills { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+    .skills { display:grid; grid-template-columns:repeat(2,1fr); gap:18px; }
     .skill { border-top:3px solid var(--blue); background:white; padding:24px; }
     .skill h3 { margin:0 0 12px; }
     .skill p { color:var(--muted); margin:0; }
@@ -94,7 +94,7 @@
       <div class="timeline"><article class="role"><time>Lug 2025 — Presente</time><div><h3>Analista Progettista / Software Developer · TEA S.R.L.</h3><p>Catanzaro, con modalità ibrida/remota da Monasterace. Analisi tecnica, architettura, sviluppo full-stack, integrazione IoT, deliverable europei e coordinamento con università e partner hardware.</p></div></article><article class="role"><time>2019 — Presente</time><div><h3>Freelance Software Developer</h3><p>Prodotti Flutter/Firebase, piattaforme web, sviluppo FiveM, database, integrazioni REST e supporto post-release per clienti e community.</p></div></article></div>
     </div></section>
     <section id="skills"><div class="wrap"><div class="section-head"><h2>Competenze</h2><p>Scelgo lo stack in funzione del problema e seguo il sistema dalla progettazione alla manutenzione.</p></div>
-      <div class="skills"><div class="skill"><h3>Product & Frontend</h3><p>React, TypeScript, JavaScript, Flutter, Dart, HTML, CSS, Tailwind.</p></div><div class="skill"><h3>Backend & Cloud</h3><p>Node.js, Python, Firebase, Cloud Functions, REST API, sicurezza basata sui ruoli.</p></div><div class="skill"><h3>Data & IoT</h3><p>MySQL, PostgreSQL, Firestore, MongoDB, ESP32, Arduino, sensori, relè e attuatori.</p></div></div>
+      <div class="skills"><div class="skill"><h3>Esperto</h3><p>Lua, MySQL.</p></div><div class="skill"><h3>Intermedio</h3><p>JavaScript, React, Flutter, Dart, Firebase, Firestore, Git/GitHub.</p></div><div class="skill"><h3>Conoscenza operativa</h3><p>TypeScript, Node.js, Python, REST API, HTML5, CSS3, Tailwind, Bootstrap, SQL, PostgreSQL, MariaDB, SQLite, MongoDB, Docker, WordPress, oxmysql.</p></div><div class="skill"><h3>IoT & Hardware</h3><p>Esperienza progettuale con ESP32, Arduino, sensori, relè, attuatori, saldatura e integrazione hardware/software.</p></div></div>
     </div></section>
     <section class="contact" id="contact"><div class="wrap contact-card"><div><div class="eyebrow">Nuove opportunità</div><h2>Costruiamo qualcosa che abbia impatto.</h2></div><div class="contact-links"><a href="mailto:tavernitiandrea@gmail.com">tavernitiandrea@gmail.com</a><a href="https://linkedin.com/in/andrea-taverniti-8403a51bb" target="_blank" rel="noreferrer">LinkedIn</a></div></div></section>
   </main>
@@ -133,8 +133,13 @@
         ['#experience .role:nth-child(2) p','Flutter/Firebase products, web platforms, FiveM development, databases, REST integrations and post-release support for clients and communities.'],
         ['#skills .section-head h2','Skills'],
         ['#skills .section-head p','I select the stack around the problem and follow the system from design through maintenance.'],
-        ['#skills .skill:nth-child(2) p','Node.js, Python, Firebase, Cloud Functions, REST APIs and role-based security.'],
-        ['#skills .skill:nth-child(3) p','MySQL, PostgreSQL, Firestore, MongoDB, ESP32, Arduino, sensors, relays and actuators.'],
+        ['#skills .skill:nth-child(1) h3','Expert'],
+        ['#skills .skill:nth-child(2) h3','Intermediate'],
+        ['#skills .skill:nth-child(3) h3','Working knowledge'],
+        ['#skills .skill:nth-child(4) h3','IoT & Hardware'],
+        ['#skills .skill:nth-child(2) p','JavaScript, React, Flutter, Dart, Firebase, Firestore, Git/GitHub.'],
+        ['#skills .skill:nth-child(3) p','TypeScript, Node.js, Python, REST APIs, HTML5, CSS3, Tailwind, Bootstrap, SQL, PostgreSQL, MariaDB, SQLite, MongoDB, Docker, WordPress, oxmysql.'],
+        ['#skills .skill:nth-child(4) p','Project experience with ESP32, Arduino, sensors, relays, actuators, soldering and hardware/software integration.'],
         ['#contact .eyebrow','New opportunities'], ['#contact h2','Let’s build something meaningful.']
       ];
       for (const [selector, value] of translations) {
