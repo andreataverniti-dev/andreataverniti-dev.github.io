@@ -1,7 +1,9 @@
 :HL["/demo/casale-taverniti/_next/static/chunks/063uzqc-rgvl-.css","style"]
 :HL["/demo/casale-taverniti/cucina/04-1000217946.jpg","image"]
 :HL["/demo/casale-taverniti/cucina/03-1000217947.jpg","image"]
+:HL["/demo/casale-taverniti/vita/10-1000217977.jpg","image"]
 :HL["https://mozzarellailparco.it/cdn/shop/products/Ricotta_600x.jpg?v=1581414537","image"]
 :HL["https://snapcalorie-webflow-website.s3.us-east-2.amazonaws.com/media/recipe_pics_v2/medium/roman_veal_scaloppine.jpg","image"]
-:HL["https://resizer.otstatic.com/v2/photos/wide-huge/1/52787371.webp","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"menu","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"E52m2ZS57KBEx5kOG-p0z"}
+:HL["/demo/casale-taverniti/vita/20-pizza-appena-sfornata.jpg","image"]
+:HL["/demo/casale-taverniti/vita/18-piatto-della-casa.jpg","image"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"menu","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"TCOccwV1XdMBsbROuxmJ7"}
