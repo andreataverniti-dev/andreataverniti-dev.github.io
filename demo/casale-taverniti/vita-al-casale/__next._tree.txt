@@ -8,4 +8,14 @@
 :HL["/demo/casale-taverniti/vita/04-1000217983.jpg","image"]
 :HL["/demo/casale-taverniti/vita/08-1000217979.jpg","image"]
 :HL["/demo/casale-taverniti/vita/09-1000217978.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"vita-al-casale","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"qIkLUPJRew_9YNjynTNPR"}
+:HL["/demo/casale-taverniti/vita/11-fichi-nello-zucchero.jpg","image"]
+:HL["/demo/casale-taverniti/vita/12-fichi-nel-forno.jpg","image"]
+:HL["/demo/casale-taverniti/vita/13-pomodori-del-casale.jpg","image"]
+:HL["/demo/casale-taverniti/vita/14-limoni-in-campagna.jpg","image"]
+:HL["/demo/casale-taverniti/vita/15-fuoco-del-camino.jpg","image"]
+:HL["/demo/casale-taverniti/vita/16-raccolta-delle-olive.jpg","image"]
+:HL["/demo/casale-taverniti/vita/17-agrumi.jpg","image"]
+:HL["/demo/casale-taverniti/vita/18-piatto-della-casa.jpg","image"]
+:HL["/demo/casale-taverniti/vita/19-pizze-nel-forno.jpg","image"]
+:HL["/demo/casale-taverniti/vita/20-pizza-appena-sfornata.jpg","image"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"vita-al-casale","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"E52m2ZS57KBEx5kOG-p0z"}

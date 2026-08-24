@@ -4,4 +4,4 @@
 :HL["https://mozzarellailparco.it/cdn/shop/products/Ricotta_600x.jpg?v=1581414537","image"]
 :HL["https://snapcalorie-webflow-website.s3.us-east-2.amazonaws.com/media/recipe_pics_v2/medium/roman_veal_scaloppine.jpg","image"]
 :HL["https://resizer.otstatic.com/v2/photos/wide-huge/1/52787371.webp","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"menu","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"qIkLUPJRew_9YNjynTNPR"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"menu","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"E52m2ZS57KBEx5kOG-p0z"}
