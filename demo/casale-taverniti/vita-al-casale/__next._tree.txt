@@ -18,4 +18,4 @@
 :HL["/demo/casale-taverniti/vita/18-piatto-della-casa.jpg","image"]
 :HL["/demo/casale-taverniti/vita/19-pizze-nel-forno.jpg","image"]
 :HL["/demo/casale-taverniti/vita/20-pizza-appena-sfornata.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"vita-al-casale","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"TCOccwV1XdMBsbROuxmJ7"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"vita-al-casale","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"vzEC6j1SSmDgLcy0VuR86"}

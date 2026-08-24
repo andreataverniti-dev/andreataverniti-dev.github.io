@@ -6,4 +6,4 @@
 :HL["https://snapcalorie-webflow-website.s3.us-east-2.amazonaws.com/media/recipe_pics_v2/medium/roman_veal_scaloppine.jpg","image"]
 :HL["/demo/casale-taverniti/vita/20-pizza-appena-sfornata.jpg","image"]
 :HL["/demo/casale-taverniti/vita/18-piatto-della-casa.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"menu","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"TCOccwV1XdMBsbROuxmJ7"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"menu","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"vzEC6j1SSmDgLcy0VuR86"}
