@@ -1,4 +1,4 @@
-:HL["/demo/casale-taverniti/_next/static/chunks/0q6bx.q2r9f.e.css","style"]
+:HL["/demo/casale-taverniti/_next/static/chunks/0ajgk-4di56n1.css","style"]
 :HL["/demo/casale-taverniti/vita/07-1000217980.jpg","image"]
 :HL["/demo/casale-taverniti/vita/10-1000217977.jpg","image"]
 :HL["/demo/casale-taverniti/vita-nuova/orto.jpg","image"]
@@ -29,4 +29,4 @@
 :HL["/demo/casale-taverniti/vita/04-1000217983.jpg","image"]
 :HL["/demo/casale-taverniti/vita/08-1000217979.jpg","image"]
 :HL["/demo/casale-taverniti/vita/09-1000217978.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"vita-al-casale","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"GhBuJRj3U9nLv9JzVH7tR"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"vita-al-casale","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"UuJ6zmi6Mse7Mgk7dYQuD"}
