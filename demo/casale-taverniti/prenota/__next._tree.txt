@@ -1,2 +1,2 @@
-:HL["/demo/casale-taverniti/_next/static/chunks/063uzqc-rgvl-.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"prenota","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"vzEC6j1SSmDgLcy0VuR86"}
+:HL["/demo/casale-taverniti/_next/static/chunks/0psah0bmcrr9b.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"prenota","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"UsU50YvItnRk_q12TELPC"}
