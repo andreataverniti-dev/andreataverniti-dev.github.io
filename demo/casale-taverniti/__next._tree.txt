@@ -1,8 +1,8 @@
-:HL["/demo/casale-taverniti/_next/static/chunks/0psah0bmcrr9b.css","style"]
+:HL["/demo/casale-taverniti/_next/static/chunks/0ajgk-4di56n1.css","style"]
 :HL["https://www.osdv.org/wp-content/uploads/2025/08/305134-b9897c0b-3390-44c8-b4f9-9be14418943d_1.jpg","image"]
 :HL["https://www.casatuscany.com/wp-content/uploads/2024/01/168166.jpg","image"]
 :HL["/demo/casale-taverniti/cucina/04-1000217946.jpg","image"]
 :HL["/demo/casale-taverniti/cucina/01-1000217949.jpg","image"]
 :HL["/demo/casale-taverniti/cucina/02-1000217948.jpg","image"]
 :HL["/demo/casale-taverniti/cucina/03-1000217947.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"UsU50YvItnRk_q12TELPC"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"eqQjN51MWG_GPe4RTh5y8"}
