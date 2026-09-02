@@ -5,4 +5,4 @@
 :HL["/demo/casale-taverniti/cucina/01-1000217949.jpg","image"]
 :HL["/demo/casale-taverniti/cucina/02-1000217948.jpg","image"]
 :HL["/demo/casale-taverniti/cucina/03-1000217947.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"eqQjN51MWG_GPe4RTh5y8"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"m6fLftyoKm891emO7Avw0"}
