@@ -1,6 +1,6 @@
 :HL["/demo/casale-taverniti/_next/static/chunks/0ajgk-4di56n1.css","style"]
-:HL["https://www.osdv.org/wp-content/uploads/2025/08/305134-b9897c0b-3390-44c8-b4f9-9be14418943d_1.jpg","image"]
-:HL["https://www.casatuscany.com/wp-content/uploads/2024/01/168166.jpg","image"]
+:HL["/demo/casale-taverniti/immagini/casale/cucina-sala.jpg","image"]
+:HL["/demo/casale-taverniti/immagini/casale/camera.jpg","image"]
 :HL["/demo/casale-taverniti/cucina/04-1000217946.jpg","image"]
 :HL["/demo/casale-taverniti/cucina/01-1000217949.jpg","image"]
 :HL["/demo/casale-taverniti/cucina/02-1000217948.jpg","image"]
