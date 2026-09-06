@@ -28,7 +28,14 @@
   function installFooterLinks() {
     document.querySelectorAll(".site-footer").forEach((footer) => {
       if (footer.querySelector(".legal-links")) return;
-      footer.insertAdjacentHTML("beforeend", `<div class="legal-links"><a href="${base}/privacy/">Privacy</a><a href="${base}/cookie-policy/">Cookie</a><a href="${base}/note-legali/">Note legali e condizioni</a><a href="${base}/accessibilita/">Accessibilità</a><button type="button" data-open-cookie-settings>Preferenze cookie</button></div>`);
+      footer.insertAdjacentHTML("beforeend", `<div class="legal-links"><a href="${base}/privacy/">Privacy</a><a href="${base}/cookie-policy/">Cookie</a><a href="${base}/note-legali/">Note legali e condizioni</a><a href="${base}/accessibilita/">Accessibilità</a><button type="button" data-open-accessibility>Impostazioni accessibilità</button><button type="button" data-open-cookie-settings>Preferenze cookie</button></div>`);
+    });
+  }
+
+  function installMenuAccessibility() {
+    document.querySelectorAll(".nav-panel").forEach((panel) => {
+      if (panel.querySelector("[data-open-accessibility]")) return;
+      panel.insertAdjacentHTML("beforeend", '<button class="a11y-menu-trigger" type="button" data-open-accessibility aria-label="Apri le impostazioni di accessibilità"><span aria-hidden="true">◐</span><small>ACCESSIBILITÀ</small></button>');
     });
   }
 
@@ -41,7 +48,7 @@
         <div class="cookie-actions"><button class="primary" type="button" data-cookie-accept>Continua con i necessari</button><button type="button" data-cookie-settings>Gestisci preferenze</button><a href="${base}/cookie-policy/">Leggi la Cookie Policy</a></div>
       </aside>
       <dialog class="legal-dialog" id="cookie-settings"><div class="dialog-inner"><div class="dialog-head"><h2>Preferenze cookie</h2><button class="dialog-close" type="button" aria-label="Chiudi">×</button></div><div class="preference-row"><div><h3>Necessari</h3><p>Memorizzano la scelta sui cookie e le impostazioni di accessibilità. Non possono essere disattivati dal pannello perché servono a ricordare le preferenze richieste.</p></div><input type="checkbox" checked disabled aria-label="Cookie necessari sempre attivi"></div><div class="preference-row"><div><h3>Analisi e marketing</h3><p>Non presenti. Il sito non usa analytics, pixel pubblicitari o sistemi di profilazione.</p></div><input type="checkbox" disabled aria-label="Cookie di analisi e marketing non presenti"></div><button class="dialog-save" type="button">SALVA E CHIUDI</button></div></dialog>
-      <button class="a11y-launcher" type="button" aria-label="Apri le impostazioni di accessibilità" title="Accessibilità">◐</button>`);
+      `);
     const dialog = document.querySelector("#cookie-settings");
     document.querySelector("[data-cookie-accept]")?.addEventListener("click", setConsent);
     const open = () => dialog?.showModal();
@@ -58,7 +65,7 @@
     const stored = JSON.parse(localStorage.getItem("casale_accessibility") || "[]");
     const sync = () => document.querySelectorAll("[data-a11y]").forEach((button) => button.setAttribute("aria-pressed", String(document.documentElement.classList.contains(button.dataset.a11y))));
     stored.forEach((name) => document.documentElement.classList.add(name)); sync();
-    document.querySelector(".a11y-launcher")?.addEventListener("click", () => dialog.showModal());
+    document.querySelectorAll("[data-open-accessibility]").forEach((button) => button.addEventListener("click", () => dialog.showModal()));
     dialog.querySelector(".dialog-close").addEventListener("click", () => dialog.close());
     dialog.querySelectorAll("[data-a11y]").forEach((button) => button.addEventListener("click", () => {
       document.documentElement.classList.toggle(button.dataset.a11y); sync();
@@ -67,7 +74,7 @@
     dialog.querySelector("[data-a11y-reset]").addEventListener("click", () => { [...document.documentElement.classList].filter((name) => name.startsWith("a11y-")).forEach((name) => document.documentElement.classList.remove(name)); localStorage.removeItem("casale_accessibility"); sync(); });
   }
 
-  function init() { installSemantics(); installFooterLinks(); installCookieSystem(); installAccessibility(); }
+  function init() { installSemantics(); installFooterLinks(); installMenuAccessibility(); installCookieSystem(); installAccessibility(); }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init); else init();
   window.addEventListener("load", init); setTimeout(init, 1200);
 })();
