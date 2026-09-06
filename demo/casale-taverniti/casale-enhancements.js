@@ -55,9 +55,6 @@
     const anchor = document.querySelector(".life-close");
     if (!anchor) return;
     const images = [
-      ["facciata-frontale.jpg", "La facciata in pietra del Casale", "LA CASA · PIETRA E MEMORIA"],
-      ["facciata-laterale.jpg", "Il lato del casale illuminato dal sole", "MURI CHE CUSTODISCONO"],
-      ["strada-del-casale.jpg", "La strada di campagna che conduce al Casale", "LA STRADA DI CASA"],
       ["pomodori-raccolti.jpg", "Pomodori appena raccolti", "DALL’ORTO · POMODORI"],
       ["fichi-dindia-maturi.jpg", "Fichi d'India maturi sulla pianta", "DALLA TERRA · FICHI D’INDIA"],
       ["fichi-dindia.jpg", "Fichi d'India nel paesaggio del casale", "FRUTTI DI FINE ESTATE"],
