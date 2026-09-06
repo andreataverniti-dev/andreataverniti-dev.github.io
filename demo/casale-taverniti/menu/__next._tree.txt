@@ -3,7 +3,7 @@
 :HL["/demo/casale-taverniti/vita-nuova/orto.jpg","image"]
 :HL["/demo/casale-taverniti/cucina/03-1000217947.jpg","image"]
 :HL["/demo/casale-taverniti/vita/10-1000217977.jpg","image"]
-:HL["https://snapcalorie-webflow-website.s3.us-east-2.amazonaws.com/media/recipe_pics_v2/medium/roman_veal_scaloppine.jpg","image"]
+:HL["/demo/casale-taverniti/vita/18-piatto-della-casa.jpg","image"]
 :HL["/demo/casale-taverniti/vita-nuova/agrumi.jpg","image"]
 :HL["/demo/casale-taverniti/vita-nuova/pizza-forno.jpg","image"]
 0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"menu","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"m6fLftyoKm891emO7Avw0"}
