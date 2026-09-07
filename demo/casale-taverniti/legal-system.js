@@ -1,12 +1,13 @@
 (() => {
   const base = "/demo/casale-taverniti";
   const cookieName = "casale_consent";
-  // Inserire qui il Website ID creato su Umami Cloud per attivare le statistiche.
-  const analyticsWebsiteId = "";
+  const analyticsWebsiteId = "eb05e99f-4d4d-4d41-9f1a-b7dce1977961";
   const getCookie = (name) => document.cookie.split("; ").find((row) => row.startsWith(`${name}=`))?.split("=")[1];
-  const setConsent = () => {
-    document.cookie = `${cookieName}=essential; Max-Age=15552000; Path=${base}; SameSite=Lax; Secure`;
+  const setConsent = (choice = "essential") => {
+    document.cookie = `${cookieName}=${choice}; Max-Age=15552000; Path=${base}; SameSite=Lax; Secure`;
     document.querySelector(".cookie-banner")?.setAttribute("hidden", "");
+    if (choice === "analytics") installAnalytics();
+    else if (document.querySelector('script[data-casale-analytics]')) location.reload();
   };
 
   function installSemantics() {
@@ -46,18 +47,21 @@
     document.body.insertAdjacentHTML("beforeend", `
       <aside class="cookie-banner" role="region" aria-label="Informazioni sui cookie" ${getCookie(cookieName) ? "hidden" : ""}>
         <h2>La vostra privacy, senza rumore.</h2>
-        <p>Questo sito usa soltanto strumenti tecnici necessari al funzionamento e alla memorizzazione delle vostre preferenze. Non usa cookie pubblicitari o di profilazione. I collegamenti a WhatsApp si attivano solo quando li scegliete.</p>
-        <div class="cookie-actions"><button class="primary" type="button" data-cookie-accept>Continua con i necessari</button><button type="button" data-cookie-settings>Gestisci preferenze</button><a href="${base}/cookie-policy/">Leggi la Cookie Policy</a></div>
+        <p>Questo sito usa strumenti tecnici necessari e, solo con la vostra scelta, statistiche anonime Umami senza cookie pubblicitari o di profilazione. I collegamenti a WhatsApp si attivano solo quando li scegliete.</p>
+        <div class="cookie-actions"><button class="primary" type="button" data-cookie-analytics>Accetta anche le statistiche</button><button type="button" data-cookie-accept>Solo necessari</button><button type="button" data-cookie-settings>Gestisci preferenze</button><a href="${base}/cookie-policy/">Leggi la Cookie Policy</a></div>
       </aside>
-      <dialog class="legal-dialog" id="cookie-settings"><div class="dialog-inner"><div class="dialog-head"><h2>Preferenze cookie</h2><button class="dialog-close" type="button" aria-label="Chiudi">×</button></div><div class="preference-row"><div><h3>Necessari</h3><p>Memorizzano la scelta sui cookie e le impostazioni di accessibilità. Non possono essere disattivati dal pannello perché servono a ricordare le preferenze richieste.</p></div><input type="checkbox" checked disabled aria-label="Cookie necessari sempre attivi"></div><div class="preference-row"><div><h3>Analisi e marketing</h3><p>Non presenti. Il sito non usa analytics, pixel pubblicitari o sistemi di profilazione.</p></div><input type="checkbox" disabled aria-label="Cookie di analisi e marketing non presenti"></div><button class="dialog-save" type="button">SALVA E CHIUDI</button></div></dialog>
+      <dialog class="legal-dialog" id="cookie-settings"><div class="dialog-inner"><div class="dialog-head"><h2>Preferenze cookie</h2><button class="dialog-close" type="button" aria-label="Chiudi">×</button></div><div class="preference-row"><div><h3>Necessari</h3><p>Memorizzano la scelta sui cookie e le impostazioni di accessibilità. Non possono essere disattivati dal pannello perché servono a ricordare le preferenze richieste.</p></div><input type="checkbox" checked disabled aria-label="Cookie necessari sempre attivi"></div><div class="preference-row"><div><h3>Statistiche anonime</h3><p>Umami misura visite e azioni aggregate, inclusi i tentativi di prenotazione, senza ricevere i dati compilati nel modulo.</p></div><input type="checkbox" data-analytics-consent aria-label="Consenti statistiche anonime"></div><button class="dialog-save" type="button">SALVA E CHIUDI</button></div></dialog>
       `);
     const dialog = document.querySelector("#cookie-settings");
-    document.querySelector("[data-cookie-accept]")?.addEventListener("click", setConsent);
-    const open = () => dialog?.showModal();
+    const analyticsToggle = dialog?.querySelector("[data-analytics-consent]");
+    if (analyticsToggle) analyticsToggle.checked = getCookie(cookieName) === "analytics";
+    document.querySelector("[data-cookie-accept]")?.addEventListener("click", () => setConsent("essential"));
+    document.querySelector("[data-cookie-analytics]")?.addEventListener("click", () => setConsent("analytics"));
+    const open = () => { if (analyticsToggle) analyticsToggle.checked = getCookie(cookieName) === "analytics"; dialog?.showModal(); };
     document.querySelector("[data-cookie-settings]")?.addEventListener("click", open);
     document.querySelectorAll("[data-open-cookie-settings]").forEach((button) => button.addEventListener("click", open));
     dialog?.querySelector(".dialog-close")?.addEventListener("click", () => dialog.close());
-    dialog?.querySelector(".dialog-save")?.addEventListener("click", () => { setConsent(); dialog.close(); });
+    dialog?.querySelector(".dialog-save")?.addEventListener("click", () => { setConsent(analyticsToggle?.checked ? "analytics" : "essential"); dialog.close(); });
   }
 
   function installAccessibility() {
@@ -77,7 +81,7 @@
   }
 
   function installAnalytics() {
-    if (!analyticsWebsiteId) return;
+    if (!analyticsWebsiteId || getCookie(cookieName) !== "analytics") return;
     if (!document.querySelector('script[data-casale-analytics]')) {
       const script = document.createElement("script");
       script.defer = true;
