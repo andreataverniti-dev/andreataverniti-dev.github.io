@@ -1,4 +1,4 @@
-/demo/casale-taverniti/il-casale/       /                       301!
+/demo/casale-taverniti/il-casale/       /il-casale/             301!
 /demo/casale-taverniti/                 /                       301!
 /demo/casale-taverniti/vita-al-casale/ /vita-al-casale/        301!
 /demo/casale-taverniti/menu/            /menu/                  301!
@@ -9,7 +9,8 @@
 /demo/casale-taverniti/accessibilita/   /accessibilita/         301!
 /demo/casale-taverniti/*                /:splat                  301!
 
-/                       /il-casale/index.html       200
+/                       /index.html                 200
+/il-casale/             /il-casale/index.html       200
 /vita-al-casale/        /vita-al-casale/index.html 200
 /menu/                  /menu/index.html            200
 /prenota/               /prenota/index.html         200
