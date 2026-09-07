@@ -4,7 +4,7 @@
   const analyticsWebsiteId = "eb05e99f-4d4d-4d41-9f1a-b7dce1977961";
   const getCookie = (name) => document.cookie.split("; ").find((row) => row.startsWith(`${name}=`))?.split("=")[1];
   const setConsent = (choice = "essential") => {
-    document.cookie = `${cookieName}=${choice}; Max-Age=15552000; Path=${base}; SameSite=Lax; Secure`;
+    document.cookie = `${cookieName}=${choice}; Max-Age=15552000; Path=/; SameSite=Lax; Secure`;
     document.querySelector(".cookie-banner")?.setAttribute("hidden", "");
     if (choice === "analytics") installAnalytics();
     else if (document.querySelector('script[data-casale-analytics]')) location.reload();
