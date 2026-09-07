@@ -3,8 +3,9 @@
 
 [[redirects]]
   from = "/"
-  to = "/demo/casale-taverniti/"
+  to = "/demo/casale-taverniti/il-casale/"
   status = 302
+  force = true
 
 [[headers]]
   for = "/*"
