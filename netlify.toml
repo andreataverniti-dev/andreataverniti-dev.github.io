@@ -3,8 +3,8 @@
 
 [[redirects]]
   from = "/"
-  to = "/demo/casale-taverniti/il-casale/"
-  status = 302
+  to = "/demo/casale-taverniti/il-casale/index.html"
+  status = 200
   force = true
 
 [[headers]]
