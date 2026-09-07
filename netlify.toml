@@ -1,9 +1,10 @@
 [build]
+  base = "demo/casale-taverniti"
   publish = "."
 
 [[redirects]]
   from = "/"
-  to = "/demo/casale-taverniti/il-casale/index.html"
+  to = "/il-casale/index.html"
   status = 200
   force = true
 
@@ -15,16 +16,16 @@
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
 
 [[headers]]
-  for = "/demo/casale-taverniti/*"
+  for = "/*"
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
 
 [[headers]]
-  for = "/demo/casale-taverniti/immagini/*"
+  for = "/immagini/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
-  for = "/demo/casale-taverniti/media/*"
+  for = "/media/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
