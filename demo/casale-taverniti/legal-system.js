@@ -1,6 +1,8 @@
 (() => {
   const base = "/demo/casale-taverniti";
   const cookieName = "casale_consent";
+  // Inserire qui il Website ID creato su Umami Cloud per attivare le statistiche.
+  const analyticsWebsiteId = "";
   const getCookie = (name) => document.cookie.split("; ").find((row) => row.startsWith(`${name}=`))?.split("=")[1];
   const setConsent = () => {
     document.cookie = `${cookieName}=essential; Max-Age=15552000; Path=${base}; SameSite=Lax; Secure`;
@@ -74,7 +76,46 @@
     dialog.querySelector("[data-a11y-reset]").addEventListener("click", () => { [...document.documentElement.classList].filter((name) => name.startsWith("a11y-")).forEach((name) => document.documentElement.classList.remove(name)); localStorage.removeItem("casale_accessibility"); sync(); });
   }
 
-  function init() { installSemantics(); installFooterLinks(); installMenuAccessibility(); installCookieSystem(); installAccessibility(); }
+  function installAnalytics() {
+    if (!analyticsWebsiteId) return;
+    if (!document.querySelector('script[data-casale-analytics]')) {
+      const script = document.createElement("script");
+      script.defer = true;
+      script.src = "https://cloud.umami.is/script.js";
+      script.dataset.websiteId = analyticsWebsiteId;
+      script.dataset.casaleAnalytics = "umami";
+      document.head.append(script);
+    }
+
+    if (document.documentElement.dataset.analyticsEventsInstalled) return;
+    document.documentElement.dataset.analyticsEventsInstalled = "true";
+    const track = (event, data = {}) => {
+      if (typeof window.umami?.track === "function") window.umami.track(event, data);
+    };
+    let bookingStarted = false;
+    document.addEventListener("focusin", (event) => {
+      if (bookingStarted || !event.target.closest?.(".reserve-form")) return;
+      bookingStarted = true;
+      track("booking_started", { page: location.pathname });
+    });
+    document.addEventListener("change", (event) => {
+      if (bookingStarted || !event.target.closest?.(".reserve-form")) return;
+      bookingStarted = true;
+      track("booking_started", { page: location.pathname });
+    });
+    document.addEventListener("click", (event) => {
+      const link = event.target.closest?.("a, button");
+      if (!link) return;
+      if (link.matches(".submit-booking") && link.tagName === "A") track("booking_continue", { page: location.pathname });
+      if (link.matches('a[href*="wa.me"], a[href*="whatsapp"]')) track("booking_whatsapp", { page: location.pathname, source: "link" });
+    });
+    document.addEventListener("submit", (event) => {
+      if (!event.target.matches?.(".reserve-form")) return;
+      track("booking_whatsapp", { page: location.pathname, source: "form" });
+    }, true);
+  }
+
+  function init() { installSemantics(); installFooterLinks(); installMenuAccessibility(); installCookieSystem(); installAccessibility(); installAnalytics(); }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init); else init();
   window.addEventListener("load", init); setTimeout(init, 1200);
 })();
