@@ -1,0 +1,10 @@
+import {useEffect,useState} from 'react';
+import {ArrowUpRight} from 'lucide-react';
+import {demoFetch} from '@/demo-api';
+import {PreorderProduct,formatPrice,canRequestProduct} from '@/lib/preorder-products';
+import PreorderDialog from './preorder-dialog';
+export default function NewArrivals(){
+ const [items,setItems]=useState<PreorderProduct[]>([]),[error,setError]=useState(''),[loading,setLoading]=useState(true),[selected,setSelected]=useState<PreorderProduct|null>(null);
+ useEffect(()=>{demoFetch('/api/products?kind=sale&category=all').then(async r=>{const d=await r.json();if(!r.ok)throw Error(d.error);setItems(d.products.filter((p:PreorderProduct)=>p.kind==='sale'&&canRequestProduct(p)).slice(0,4));}).catch(()=>setError('Il catalogo non è disponibile. Riprova tra poco.')).finally(()=>setLoading(false));},[]);
+ return <section className="new-arrivals section" id="nuovi-arrivi"><div className="arrivals-heading"><div><p className="eyebrow muted">LE ULTIME NOVITÀ IN EDICOLA</p><h2>Appena arrivati.</h2><p>Gli ultimi articoli aggiunti al catalogo, già disponibili per il ritiro.</p></div><a className="text-link" href="/prodotti">Tutti i prodotti <ArrowUpRight size={18}/></a></div>{loading?<p role="status">Caricamento delle novità…</p>:error?<p role="alert">{error}</p>:!items.length?<p>I prossimi arrivi compariranno qui. <a href="/preordini">Scopri intanto i preordini.</a></p>:<div className="arrival-grid">{items.map(p=><article className="arrival-card" key={p.id}><button className="arrival-photo" onClick={()=>setSelected(p)} aria-label={'Scopri '+p.name}><span>NUOVO ARRIVO</span><img src={p.image} alt={p.name}/></button><small>{p.brand} · {p.type}</small><h3>{p.name} {p.demo&&<span className="demo-badge">DEMO</span>}</h3><p>{formatPrice(p.priceCents)}</p><button className="button dark" onClick={()=>setSelected(p)}>Richiedi il ritiro <ArrowUpRight size={17}/></button></article>)}</div>}{selected&&<PreorderDialog key={selected.id} product={selected} onClose={()=>setSelected(null)}/>}</section>;
+}

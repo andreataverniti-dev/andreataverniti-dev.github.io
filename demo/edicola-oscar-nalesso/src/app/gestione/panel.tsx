@@ -1,0 +1,6 @@
+'use client';
+import {Tabs,TabsList,TabsTrigger,TabsContent} from '@/components/ui/tabs';
+import {ArrowUpRight,Layers3} from 'lucide-react';
+import ProductManager from './products';
+import OrderManager from './orders';
+export default function Admin(){return <main className="admin-workspace"><header className="admin-workspace-header"><a href="/" className="brand"><span className="brand-icon"><Layers3/></span><span>OSCAR NALESSO<small>AREA EDICOLA</small></span></a><div className="admin-catalog-links"><a className="text-link" href="/prodotti">Prodotti disponibili <ArrowUpRight size={17}/></a><a className="text-link" href="/preordini">Preordini <ArrowUpRight size={17}/></a></div></header><div className="admin-heading"><p className="eyebrow muted">IL TUO NEGOZIO, LE TUE PROSSIME USCITE</p><h1>Gestisci il tuo catalogo.</h1><p>Pubblica i prodotti e segui le richieste dei tuoi clienti.</p></div><Tabs defaultValue="sale"><TabsList className="admin-tabs"><TabsTrigger value="sale">Prodotti in vendita</TabsTrigger><TabsTrigger value="products">Prodotti in preordine</TabsTrigger><TabsTrigger value="orders">Richieste dei clienti</TabsTrigger></TabsList><TabsContent value="sale"><ProductManager kind="sale"/></TabsContent><TabsContent value="products"><ProductManager kind="preorder"/></TabsContent><TabsContent value="orders"><OrderManager/></TabsContent></Tabs></main>}
