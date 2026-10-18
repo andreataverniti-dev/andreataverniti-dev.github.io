@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Andrea Taverniti, Software Engineer specializzato in prodotti full-stack, cloud, IoT e progetti R&D.">
+  <meta name="description" content="Andrea Taverniti, Software Engineer laureato in Ingegneria Informatica all'Università della Calabria, specializzato in prodotti full-stack, cloud, IoT e progetti R&D.">
   <meta property="og:title" content="Andrea Taverniti — Software Engineer">
-  <meta property="og:description" content="Software engineering, prodotti full-stack, cloud, IoT e ricerca applicata.">
+  <meta property="og:description" content="Software Engineer laureato in Ingegneria Informatica · Full-stack, cloud, IoT e ricerca applicata.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://andreataverniti-dev.github.io/">
   <link rel="canonical" href="https://andreataverniti-dev.github.io/">
@@ -62,22 +62,26 @@
     .skill { border-top:3px solid var(--blue); background:white; padding:24px; }
     .skill h3 { margin:0 0 12px; }
     .skill p { color:var(--muted); margin:0; }
+    .education-card { background:white; border:1px solid var(--line); padding:32px; display:grid; grid-template-columns:190px 1fr; gap:35px; align-items:start; }
+    .education-date { color:var(--blue); font-weight:850; }
+    .education-card h3 { margin:0 0 7px; font-size:1.45rem; letter-spacing:-.025em; }
+    .education-card p { color:var(--muted); margin:0; }
     .contact { background:var(--sea); }
     .contact-card { display:grid; grid-template-columns:1.4fr 1fr; gap:50px; align-items:end; }
     .contact h2 { font-size:clamp(2.6rem,6vw,5rem); }
     .contact-links { display:grid; gap:12px; }
     .contact-links a { font-weight:800; text-decoration:none; border-bottom:1px solid rgba(19,43,61,.25); padding:12px 0; }
     footer { padding:30px 0; color:var(--muted); font-size:.88rem; }
-    @media(max-width:780px){ .navlinks>a:not(.button){display:none}.proof{grid-template-columns:repeat(2,1fr)}.section-head,.contact-card{grid-template-columns:1fr}.case-grid{grid-template-columns:1fr}.case.featured{grid-column:auto}.role{grid-template-columns:1fr}.skills{grid-template-columns:1fr}header{padding-top:78px} }
+    @media(max-width:780px){ .navlinks>a:not(.button){display:none}.proof{grid-template-columns:repeat(2,1fr)}.section-head,.contact-card{grid-template-columns:1fr}.case-grid{grid-template-columns:1fr}.case.featured{grid-column:auto}.role,.education-card{grid-template-columns:1fr}.skills{grid-template-columns:1fr}header{padding-top:78px} }
   </style>
 </head>
 <body>
-  <nav><div class="wrap"><a class="brand" href="#top">Andrea Taverniti</a><div class="navlinks"><a href="#work">Progetti</a><a href="#experience">Esperienza</a><a href="#skills">Competenze</a><span class="language"><span class="active">IT</span><span>·</span><a href="?lang=en" lang="en">EN</a></span><a class="button" href="mailto:tavernitiandrea@gmail.com">Contattami</a></div></div></nav>
+  <nav><div class="wrap"><a class="brand" href="#top">Andrea Taverniti</a><div class="navlinks"><a href="#work">Progetti</a><a href="#experience">Esperienza</a><a href="#education">Formazione</a><a href="#skills">Competenze</a><span class="language"><span class="active">IT</span><span>·</span><a href="?lang=en" lang="en">EN</a></span><a class="button" href="mailto:tavernitiandrea@gmail.com">Contattami</a></div></div></nav>
   <header id="top"><div class="wrap">
-    <div class="eyebrow">Software Engineer · Full-Stack · Cloud · IoT</div>
+    <div class="eyebrow">Software Engineer · Laureato in Ingegneria Informatica · Full-Stack · Cloud · IoT</div>
     <h1>Trasformo problemi reali in sistemi completi.</h1>
-    <p class="lead">Progetto, sviluppo e mantengo prodotti software che collegano applicazioni, cloud e hardware. Lavoro in R&D su progetti europei e costruisco autonomamente piattaforme utilizzate da utenti reali.</p>
-    <div class="actions"><a class="button" href="assets/Andrea_Taverniti_CV_Premium_IT.pdf?v=20260818-shifted" target="_blank">CV Italiano</a><a class="button secondary" href="assets/Andrea_Taverniti_CV_Premium_EN.pdf?v=20260818-shifted" target="_blank" lang="en">English CV</a><a class="button secondary" href="https://snals-monasterace.web.app/#/home" target="_blank" rel="noreferrer">Vedi SNALS live</a></div>
+    <p class="lead">Software Engineer laureato in Ingegneria Informatica all'Università della Calabria. Progetto, sviluppo e mantengo prodotti software che collegano applicazioni, cloud e hardware. Lavoro in R&D su progetti europei e costruisco autonomamente piattaforme utilizzate da utenti reali.</p>
+    <div class="actions"><a class="button" href="assets/Andrea_Taverniti_CV_Premium_IT.pdf?v=20261018-degree" target="_blank">CV Italiano</a><a class="button secondary" href="assets/Andrea_Taverniti_CV_Premium_EN.pdf?v=20261018-degree" target="_blank" lang="en">English CV</a><a class="button secondary" href="https://snals-monasterace.web.app/#/home" target="_blank" rel="noreferrer">Vedi SNALS live</a></div>
     <div class="proof"><div><strong>80+</strong><span>script FiveM sviluppati</span></div><div><strong>100+</strong><span>community e server supportati</span></div><div><strong>300k+</strong><span>record gestiti in MySQL</span></div><div><strong>End-to-end</strong><span>ownership di prodotto e architettura</span></div></div>
   </div></header>
   <main>
@@ -93,6 +97,9 @@
     <section id="experience"><div class="wrap"><div class="section-head"><h2>Esperienza</h2><p>Un percorso costruito tra sviluppo professionale, ricerca applicata e prodotti indipendenti.</p></div>
       <div class="timeline"><article class="role"><time>Lug 2025 — Ago 2026</time><div><h3>Analista Progettista / Software Developer · TEA S.R.L.</h3><p>Catanzaro, con modalità ibrida/remota da Monasterace. Analisi tecnica, architettura, sviluppo full-stack, integrazione IoT, deliverable europei e coordinamento con università e partner hardware.</p></div></article><article class="role"><time>2019 — Presente</time><div><h3>Freelance Software Developer</h3><p>Prodotti Flutter/Firebase, piattaforme web, sviluppo FiveM, database, integrazioni REST e supporto post-release per clienti e community.</p></div></article></div>
     </div></section>
+    <section id="education"><div class="wrap"><div class="section-head"><h2>Formazione</h2><p>La base accademica che affianca l'esperienza pratica maturata su prodotti software, cloud, IoT e ricerca applicata.</p></div>
+      <article class="education-card"><div class="education-date">14 ottobre 2026</div><div><h3>Corso di Laurea in Ingegneria Informatica</h3><p>Università della Calabria (Unical) · Laurea conseguita il 14 ottobre 2026.</p></div></article>
+    </div></section>
     <section id="skills"><div class="wrap"><div class="section-head"><h2>Competenze</h2><p>Scelgo lo stack in funzione del problema e seguo il sistema dalla progettazione alla manutenzione.</p></div>
       <div class="skills"><div class="skill"><h3>Esperto</h3><p>Lua, MySQL.</p></div><div class="skill"><h3>Intermedio</h3><p>JavaScript, React, Flutter, Dart, Firebase, Firestore, Git/GitHub.</p></div><div class="skill"><h3>Conoscenza operativa</h3><p>TypeScript, Node.js, Python, REST API, HTML5, CSS3, Tailwind, Bootstrap, SQL, PostgreSQL, MariaDB, SQLite, MongoDB, Docker, WordPress, oxmysql.</p></div><div class="skill"><h3>IoT & Hardware</h3><p>Esperienza progettuale con ESP32, Arduino, sensori, relè, attuatori, saldatura e integrazione hardware/software.</p></div></div>
     </div></section>
@@ -103,49 +110,33 @@
     if (new URLSearchParams(location.search).get('lang') === 'en') {
       document.documentElement.lang = 'en';
       document.title = 'Andrea Taverniti — Software Engineer';
-      document.querySelector('meta[name="description"]').content = 'Andrea Taverniti, Software Engineer focused on full-stack products, cloud, IoT and R&D projects.';
+      document.querySelector('meta[name="description"]').content = 'Andrea Taverniti, Software Engineer with a degree in Computer Engineering from the University of Calabria, focused on full-stack products, cloud, IoT and R&D projects.';
       const translations = [
-        ['.navlinks a[href="#work"]','Projects'], ['.navlinks a[href="#experience"]','Experience'],
+        ['.navlinks a[href="#work"]','Projects'], ['.navlinks a[href="#experience"]','Experience'], ['.navlinks a[href="#education"]','Education'],
         ['.navlinks a[href="#skills"]','Skills'], ['.navlinks .button','Contact me'],
-        ['.eyebrow','Software Engineer · Full-Stack · Cloud · IoT'],
+        ['header .eyebrow','Software Engineer · Computer Engineering Graduate · Full-Stack · Cloud · IoT'],
         ['h1','I turn real-world problems into complete systems.'],
-        ['.lead','I design, build and maintain software products connecting applications, cloud services and hardware. I work in R&D on European projects and independently build platforms used by real users.'],
+        ['.lead','Software Engineer with a degree in Computer Engineering from the University of Calabria. I design, build and maintain software products connecting applications, cloud services and hardware. I work in R&D on European projects and independently build platforms used by real users.'],
         ['.actions a:nth-child(1)','Italian CV'], ['.actions a:nth-child(2)','English CV'], ['.actions a:nth-child(3)','View SNALS live'],
         ['.proof div:nth-child(1) span','FiveM scripts developed'], ['.proof div:nth-child(2) span','communities and servers supported'],
         ['.proof div:nth-child(3) span','records managed in MySQL'], ['.proof div:nth-child(4) span','product and architecture ownership'],
-        ['#work .section-head h2','Selected projects'],
-        ['#work .section-head p','Case studies showing how I approach context, problems, technical decisions, integration and outcomes.'],
-        ['#work .case:nth-child(1) .tag','Live product · real users'],
-        ['#work .case:nth-child(1) p','A cross-platform platform independently designed and developed to digitise appointments, cases, communications and union help-desk services. It includes roles and approvals, document workflows, real-time chat, QR codes, notifications, reporting and Google Calendar/Meet integration.'],
-        ['#work .case:nth-child(2) .tag','R&D · accessibility'],
-        ['#work .case:nth-child(2) p','Development of a management tool to standardise experience configuration and generate project files; evolutionary maintenance, bug fixing and integration of software, sensors and actuators for a public museum-accessibility system.'],
-        ['#work .case:nth-child(3) .tag','IoT demonstrator'],
-        ['#work .case:nth-child(3) p','Design and integration of a demonstrator using ESP32, relays, proximity sensors, fans and control logic, including assembly, programming, debugging and testing for museums in Calabria.'],
-        ['#work .case:nth-child(4) .tag','European research'],
-        ['#work .case:nth-child(4) p','Creation of the application foundation, technical documentation, presentations and deliverables for a public project focused on accessible, multisensory games for children on the autism spectrum.'],
-        ['#work .case:nth-child(5) .tag','Multiplayer engineering'],
-        ['#work .case:nth-child(5) p','More than 80 custom systems, React interfaces and live architectures for over 100 communities, working with large MySQL databases and asynchronous synchronisation.'],
-        ['#experience .section-head h2','Experience'],
-        ['#experience .section-head p','A career built across professional software development, applied research and independent products.'],
-        ['#experience .role:nth-child(1) time','Jul 2025 — Aug 2026'],
-        ['#experience .role:nth-child(1) p','Catanzaro, with hybrid/remote work from Monasterace. Technical analysis, architecture, full-stack development, IoT integration, European-project deliverables and coordination with universities and hardware partners.'],
-        ['#experience .role:nth-child(2) time','2019 — Present'],
-        ['#experience .role:nth-child(2) p','Flutter/Firebase products, web platforms, FiveM development, databases, REST integrations and post-release support for clients and communities.'],
-        ['#skills .section-head h2','Skills'],
-        ['#skills .section-head p','I select the stack around the problem and follow the system from design through maintenance.'],
-        ['#skills .skill:nth-child(1) h3','Expert'],
-        ['#skills .skill:nth-child(2) h3','Intermediate'],
-        ['#skills .skill:nth-child(3) h3','Working knowledge'],
-        ['#skills .skill:nth-child(4) h3','IoT & Hardware'],
-        ['#skills .skill:nth-child(2) p','JavaScript, React, Flutter, Dart, Firebase, Firestore, Git/GitHub.'],
-        ['#skills .skill:nth-child(3) p','TypeScript, Node.js, Python, REST APIs, HTML5, CSS3, Tailwind, Bootstrap, SQL, PostgreSQL, MariaDB, SQLite, MongoDB, Docker, WordPress, oxmysql.'],
-        ['#skills .skill:nth-child(4) p','Project experience with ESP32, Arduino, sensors, relays, actuators, soldering and hardware/software integration.'],
+        ['#work .section-head h2','Selected projects'], ['#work .section-head p','Case studies showing how I approach context, problems, technical decisions, integration and outcomes.'],
+        ['#work .case:nth-child(1) .tag','Live product · real users'], ['#work .case:nth-child(1) p','A cross-platform platform independently designed and developed to digitise appointments, cases, communications and union help-desk services. It includes roles and approvals, document workflows, real-time chat, QR codes, notifications, reporting and Google Calendar/Meet integration.'],
+        ['#work .case:nth-child(2) .tag','R&D · accessibility'], ['#work .case:nth-child(2) p','Development of a management tool to standardise experience configuration and generate project files; evolutionary maintenance, bug fixing and integration of software, sensors and actuators for a public museum-accessibility system.'],
+        ['#work .case:nth-child(3) .tag','IoT demonstrator'], ['#work .case:nth-child(3) p','Design and integration of a demonstrator using ESP32, relays, proximity sensors, fans and control logic, including assembly, programming, debugging and testing for museums in Calabria.'],
+        ['#work .case:nth-child(4) .tag','European research'], ['#work .case:nth-child(4) p','Creation of the application foundation, technical documentation, presentations and deliverables for a public project focused on accessible, multisensory games for children on the autism spectrum.'],
+        ['#work .case:nth-child(5) .tag','Multiplayer engineering'], ['#work .case:nth-child(5) p','More than 80 custom systems, React interfaces and live architectures for over 100 communities, working with large MySQL databases and asynchronous synchronisation.'],
+        ['#experience .section-head h2','Experience'], ['#experience .section-head p','A career built across professional software development, applied research and independent products.'],
+        ['#experience .role:nth-child(1) time','Jul 2025 — Aug 2026'], ['#experience .role:nth-child(1) p','Catanzaro, with hybrid/remote work from Monasterace. Technical analysis, architecture, full-stack development, IoT integration, European-project deliverables and coordination with universities and hardware partners.'],
+        ['#experience .role:nth-child(2) time','2019 — Present'], ['#experience .role:nth-child(2) p','Flutter/Firebase products, web platforms, FiveM development, databases, REST integrations and post-release support for clients and communities.'],
+        ['#education .section-head h2','Education'], ['#education .section-head p','The academic foundation supporting hands-on experience across software products, cloud, IoT and applied research.'],
+        ['#education .education-date','14 October 2026'], ['#education h3','Degree Programme in Computer Engineering'], ['#education .education-card p','University of Calabria (Unical) · Degree awarded on 14 October 2026.'],
+        ['#skills .section-head h2','Skills'], ['#skills .section-head p','I select the stack around the problem and follow the system from design through maintenance.'],
+        ['#skills .skill:nth-child(1) h3','Expert'], ['#skills .skill:nth-child(2) h3','Intermediate'], ['#skills .skill:nth-child(3) h3','Working knowledge'], ['#skills .skill:nth-child(4) h3','IoT & Hardware'],
+        ['#skills .skill:nth-child(2) p','JavaScript, React, Flutter, Dart, Firebase, Firestore, Git/GitHub.'], ['#skills .skill:nth-child(3) p','TypeScript, Node.js, Python, REST APIs, HTML5, CSS3, Tailwind, Bootstrap, SQL, PostgreSQL, MariaDB, SQLite, MongoDB, Docker, WordPress, oxmysql.'], ['#skills .skill:nth-child(4) p','Project experience with ESP32, Arduino, sensors, relays, actuators, soldering and hardware/software integration.'],
         ['#contact .eyebrow','New opportunities'], ['#contact h2','Let’s build something meaningful.']
       ];
-      for (const [selector, value] of translations) {
-        const element = document.querySelector(selector);
-        if (element) element.textContent = value;
-      }
+      for (const [selector, value] of translations) { const element = document.querySelector(selector); if (element) element.textContent = value; }
       document.querySelector('.language').innerHTML = '<a href="./" lang="it">IT</a><span>·</span><span class="active">EN</span>';
     }
   </script>
